@@ -845,6 +845,7 @@ module managedCluster 'br/public:avm/res/container-service/managed-cluster:0.10.
         type: 'VirtualMachineScaleSets'
         minCount: 1
         maxCount: 2
+        availabilityZones: [1,2]
 
         // WAF aligned configuration for Private Networking
         enableAutoScaling: true

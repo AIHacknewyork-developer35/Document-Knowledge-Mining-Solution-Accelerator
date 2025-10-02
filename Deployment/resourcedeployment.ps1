@@ -678,9 +678,9 @@ try {
 
     ## Define Image Tags
     $acrNamespace = "kmgs"
-    $acrAIServiceTag = "$($deploymentResult.AzContainerRegistryName).azurecr.io/$acrNamespace/aiservice"
-    $acrKernelMemoryTag = "$($deploymentResult.AzContainerRegistryName).azurecr.io/$acrNamespace/kernelmemory"
-    $acrFrontAppTag = "$($deploymentResult.AzContainerRegistryName).azurecr.io/$acrNamespace/frontapp"
+    $acrAIServiceTag = "$($deploymentResult.AzContainerRegistryName).azurecr.io/$acrNamespace/aiservice:latest"
+    $acrKernelMemoryTag = "$($deploymentResult.AzContainerRegistryName).azurecr.io/$acrNamespace/kernelmemory:latest"
+    $acrFrontAppTag = "$($deploymentResult.AzContainerRegistryName).azurecr.io/$acrNamespace/frontapp:latest"
     
     # Validate AI Service Tag IsNull Or Empty.    
     ValidateVariableIsNullOrEmpty -variableValue $acrAIServiceTag -variableName "AI Service Tag"

@@ -3,14 +3,14 @@
 ARG BUILD_IMAGE_TAG="8.0-jammy"
 ARG RUN_IMAGE_TAG="8.0-alpine"
 
-ARG PLATFORM=$BUILDPLATFORM
-#ARG PLATFORM=$TARGETPLATFORM
+ARG PLATFORM=$TARGETPLATFORM
+#ARG PLATFORM=$BUILDPLATFORM
 
 #########################################################################
 # .NET build
 #########################################################################
 
-# ARG BUILDPLATFORM
+# ARG TARGETPLATFORM
 FROM --platform=$PLATFORM mcr.microsoft.com/dotnet/sdk:$BUILD_IMAGE_TAG AS build
 
 ARG BUILD_CONFIGURATION=Release
